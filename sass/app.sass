@@ -1,0 +1,79 @@
+@mixin forLargeScreens($media)
+    @media (min-width: $media/16+em)
+        @content
+  
+body
+    background: #eee
+    
+body.home-page
+    background: #fff
+        
+.menu
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    max-width: 980px
+    margin: auto
+    padding: 2px
+    list-style: none
+    border: #999 1px dotted
+    li
+        flex-grow: 1
+        flex-basis: 100%
+        @include forLargeScreens(320)
+            flex-basis: 30%
+        @include forLargeScreens(640)
+            flex-basis: 0
+        margin: 3px
+        text-align: center
+        a
+            display: block
+            padding: 1em
+            color: #2963bd
+            text-decoration: none
+            background: #eee
+            @include forLargeScreens(640)
+                background: none
+                
+main
+    max-width: 980px
+    margin: auto
+    padding: 20px
+    background: #fff
+    border-radius: 10px
+    margin-bottom: 20px
+    margin-top: 60px
+    
+.navbar-inverse
+    border-radius: 0
+    
+.navbar
+    position: fixed
+    top: 0
+    z-index: 100
+    width: 100%
+    
+.home-page-container
+    margin-top: 60px
+    
+.home-container
+    background: #fff
+    
+.navbar-brand
+    font-family: 'Fredericka the Great', serif;
+    color: #fff !important
+    font-size: 24px
+    
+textarea.form-control
+    height: 200px
+    
+h1
+    font-family: 'Fredericka the Great', serif;
+    
+h1.page-header
+    width: 100%
+    text-align: center
+    margin-top: 10px
+    
+
+        
