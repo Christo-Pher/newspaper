@@ -16,6 +16,7 @@ let babel = require('rollup-plugin-babel'),
     ],
     jsLibs = [
         'node_modules/jquery/dist/jquery.js',
+        'dist/js/bootstrap.js',
         'node_modules/babel-polyfill/dist/polyfill.js',
         'node_modules/js-cookie/src/js.cookie.js',
         'js/build/app.js'
